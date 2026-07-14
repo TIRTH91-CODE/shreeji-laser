@@ -1,8 +1,6 @@
-/* ============================================================
-   SHREEJI LASER - STYLESHEET
+/* SHREEJI LASER - STYLESHEET
    Aesthetics: Clean, Premium Industrial, White Theme, Compact Header
-   Typography: Poppins
-============================================================ */
+   Typography: Poppins */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -32,9 +30,7 @@
   --transition:  0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* ============================================================
-   RESET & BASE STYLES
-============================================================ */
+/* RESET & BASE STYLES */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -75,9 +71,7 @@ a {
   transition: var(--transition);
 }
 
-/* ============================================================
-   UTILITY CLASSES
-============================================================ */
+/* UTILITY CLASSES */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -175,18 +169,23 @@ a {
   background: rgba(17, 17, 17, 0.04);
 }
 
-/* ============================================================
-   PAGE ROUTING & TRANSITIONS
-============================================================ */
+/* PAGE ROUTING & TRANSITIONS */
 .page {
-  display: none;
+  display: block;
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease;
 }
 
 .page.active {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 10000px;
+  overflow: visible;
+  pointer-events: auto;
 }
 
 .page.active.show {
@@ -194,9 +193,7 @@ a {
   transform: translateY(0);
 }
 
-/* ============================================================
-   COMPACT HEADER
-============================================================ */
+/* COMPACT HEADER */
 header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
@@ -764,11 +761,12 @@ section.white-section {
 }
 
 .service-card-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  color: var(--cyan);
   stroke: var(--cyan);
   fill: none;
-  stroke-width: 2;
+  stroke-width: 1.5;
 }
 
 .service-card h3 {
@@ -935,12 +933,13 @@ section.white-section {
 }
 
 .industry-icon::before {
-  content: '';
-  width: 16px;
-  height: 16px;
-  border: 2px solid var(--steel);
-  border-radius: 3px;
-  display: block;
+  content: attr(data-number);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--steel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .industry-card h4 {
@@ -1534,6 +1533,20 @@ textarea {
 .mission-card .big-icon {
   font-size: 2.5rem;
   margin-bottom: 16px;
+}
+
+.mission-card .mission-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--cyan), var(--cyan-dark));
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 50%;
+  margin: 0 auto 16px;
 }
 
 .mission-card h3 {

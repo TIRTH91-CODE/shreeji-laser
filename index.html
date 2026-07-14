@@ -42,7 +42,7 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="#" class="active" onclick="showPage('home'); return false;">HOME</a></li>
           <li><a href="#" onclick="showPage('about'); return false;">ABOUT</a></li>
-          <li><a href="#" onclick="showPage('services'); return false;">PRODUCTS</a></li>
+          <li><a href="#" onclick="showPage('services'); return false;">SERVICES</a></li>
           <li><a href="#" onclick="showPage('gallery'); return false;">GALLERY</a></li>
           <li><a href="#" onclick="showPage('global'); return false;">CLIENTS</a></li>
           <li><a href="#" class="nav-cta" onclick="showPage('contact'); return false;">CONTACT</a></li>
@@ -125,59 +125,59 @@
         </div>
 
         <div class="services-grid stagger">
-          <div class="service-card" onclick="showPage('services')">
+          <div class="service-card" onclick="showServiceDetail('laser-cutting')">
             <div class="service-img-wrap">
               <img class="service-card-img" src="https://images.unsplash.com/photo-1569068938052-a7c38f94a7f1?w=600&q=80" alt="CNC Laser Cutting">
             </div>
             <div class="service-card-body">
               <div class="service-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18M3 3l18 18M21 3L3 21" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
               </div>
               <h3>CNC Laser Cutting</h3>
               <p>High-precision CNC laser cutting for complex, tight-tolerance sheet metal components with exceptional repeatability and clean edges.</p>
-              <div class="service-card-link">See More</div>
+              <div class="service-card-link">See More →</div>
             </div>
           </div>
 
-          <div class="service-card" onclick="showPage('services')">
+          <div class="service-card" onclick="showServiceDetail('metal-bending')">
             <div class="service-img-wrap">
               <img class="service-card-img" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="CNC Metal Bending">
             </div>
             <div class="service-card-body">
               <div class="service-card-icon">
-                <svg viewBox="0 0 24 24"><polyline points="4,17 10,11 14,15 20,7"/><path d="M20 7h-4v4"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M3 12c0-5 2-8 9-8s9 3 9 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M3 12c0 5 2 8 9 8s9-3 9-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="8" y1="9" x2="8" y2="15" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="9" x2="16" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>
               </div>
               <h3>CNC Metal Bending</h3>
               <p>Advanced press brake bending technology for versatile, high-quality metal forming. Precise angular control with repeatable accuracy.</p>
-              <div class="service-card-link">See More</div>
+              <div class="service-card-link">See More →</div>
             </div>
           </div>
 
-          <div class="service-card" onclick="showPage('services')">
+          <div class="service-card" onclick="showServiceDetail('welding-fabrication')">
             <div class="service-img-wrap">
               <img class="service-card-img" src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80" alt="Welding and Fabrication">
             </div>
             <div class="service-card-body">
               <div class="service-card-icon">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="1.5" fill="currentColor"/><circle cx="18" cy="18" r="1.5" fill="currentColor"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/><circle cx="6" cy="18" r="1.5" fill="currentColor"/><path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
               </div>
               <h3>Welding & Fabrication</h3>
               <p>Complete structural welding and metal fabrication services — MIG, TIG, and arc welding — for industrial assemblies and parts.</p>
-              <div class="service-card-link">See More</div>
+              <div class="service-card-link">See More →</div>
             </div>
           </div>
 
-          <div class="service-card" onclick="showPage('services')">
+          <div class="service-card" onclick="showServiceDetail('powder-coating')">
             <div class="service-img-wrap">
               <img class="service-card-img" src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=600&q=80" alt="Powder Coating">
             </div>
             <div class="service-card-body">
               <div class="service-card-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M4 9h5v10H4zM15 9h5v10h-5z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 4L10 2M14.5 4L14 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9.5 14h5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
               </div>
               <h3>Powder Coating</h3>
               <p>Durable, professional-grade powder coating delivering superior corrosion protection and flawless aesthetic finish on all surfaces.</p>
-              <div class="service-card-link">See More</div>
+              <div class="service-card-link">See More →</div>
             </div>
           </div>
         </div>
@@ -290,9 +290,7 @@
     </section>
   </div>
 
-  <!-- ============================================================
-       PAGE: ABOUT
-  ============================================================ -->
+  <!-- PAGE: ABOUT-->
   <div class="page" id="page-about">
     <div class="page-header">
       <div class="container">
@@ -344,17 +342,17 @@
         
         <div class="mission-grid stagger">
           <div class="mission-card">
-            <div class="big-icon">🎯</div>
+            <div class="mission-number">01</div>
             <h3>Our Mission</h3>
             <p>To provide precise, reliable, and innovative fabrication solutions that exceed client expectations — delivered on time and within budget.</p>
           </div>
           <div class="mission-card">
-            <div class="big-icon">🔭</div>
+            <div class="mission-number">02</div>
             <h3>Our Vision</h3>
             <p>To be the most trusted precision metal fabrication partner in western India — continuously investing in technology, people, and processes.</p>
           </div>
           <div class="mission-card">
-            <div class="big-icon">💎</div>
+            <div class="mission-number">03</div>
             <h3>Our Values</h3>
             <p>Precision in every cut. Integrity in every deal. Innovation in every process. Customer satisfaction in every delivery.</p>
           </div>
@@ -406,7 +404,7 @@
     </div>
 
     <!-- LASER CUTTING -->
-    <section class="white-section">
+    <section class="white-section" id="service-laser-cutting">
       <div class="container">
         <div class="about-grid">
           <div class="reveal-left">
@@ -440,7 +438,7 @@
     </section>
 
     <!-- CNC BENDING -->
-    <section class="white-section" style="background: var(--smoke);">
+    <section class="white-section" id="service-metal-bending" style="background: var(--smoke);">
       <div class="container">
         <div class="about-grid">
           <div class="reveal-left">
@@ -474,7 +472,7 @@
     </section>
 
     <!-- FABRICATION & WELDING -->
-    <section class="white-section">
+    <section class="white-section" id="service-welding-fabrication">
       <div class="container">
         <div class="about-grid">
           <div class="reveal-left">
@@ -508,12 +506,12 @@
     </section>
 
     <!-- POWDER COATING -->
-    <section class="white-section" style="background: var(--smoke);">
+    <section class="white-section" id="service-powder-coating" style="background: var(--smoke);">
       <div class="container">
         <div class="about-grid">
           <div class="reveal-left">
             <div class="about-img-main">
-              <!-- Dispenser photo removed -->
+              <img src="https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=700&q=80" alt="Powder Coating Process">
             </div>
           </div>
           <div class="reveal-right">
@@ -559,9 +557,7 @@
     </section>
   </div>
 
-  <!-- ============================================================
-       PAGE: GALLERY (PHOTOS & VIDEOS)
-  ============================================================ -->
+  <!-- PAGE: GALLERY (PHOTOS & VIDEOS) -->
   <div class="page" id="page-gallery">
     <div class="page-header">
       <div class="container">
@@ -664,9 +660,7 @@
     </section>
   </div>
 
-  <!-- ============================================================
-       PAGE: GLOBAL PRESENCE
-  ============================================================ -->
+  <!--PAGE: GLOBAL PRESENCE-->
   <div class="page" id="page-global">
     <div class="page-header">
       <div class="container">
@@ -689,10 +683,10 @@
         </div>
         
         <div class="industries-grid stagger">
-          <div class="industry-card"><div class="industry-icon" aria-hidden="true"></div><h4>Automotive</h4><p>Precision body panels and brackets for auto OEMs.</p></div>
-          <div class="industry-card"><div class="industry-icon" aria-hidden="true"></div><h4>Textile Machinery</h4><p>Machine enclosures and fabricated structural parts.</p></div>
-          <div class="industry-card"><div class="industry-icon" aria-hidden="true"></div><h4>Pharmaceutical</h4><p>SS enclosures and clean-room frames for pharma.</p></div>
-          <div class="industry-card"><div class="industry-icon" aria-hidden="true"></div><h4>Heavy Engineering</h4><p>Large structural fabrications and complex assemblies.</p></div>
+          <div class="industry-card"><div class="industry-icon" data-number="1" aria-hidden="true"></div><h4>Automotive</h4><p>Precision body panels and brackets for auto OEMs.</p></div>
+          <div class="industry-card"><div class="industry-icon" data-number="2" aria-hidden="true"></div><h4>Textile Machinery</h4><p>Machine enclosures and fabricated structural parts.</p></div>
+          <div class="industry-card"><div class="industry-icon" data-number="3" aria-hidden="true"></div><h4>Pharmaceutical</h4><p>SS enclosures and clean-room frames for pharma.</p></div>
+          <div class="industry-card"><div class="industry-icon" data-number="4" aria-hidden="true"></div><h4>Heavy Engineering</h4><p>Large structural fabrications and complex assemblies.</p></div>
         </div>
       </div>
     </section>
@@ -750,9 +744,7 @@
     </section>
   </div>
 
-  <!-- ============================================================
-       PAGE: DOWNLOADS
-  ============================================================ -->
+  <!-- PAGE: DOWNLOADS-->
   <div class="page" id="page-downloads">
     <div class="page-header">
       <div class="container">
@@ -799,9 +791,7 @@
     </section>
   </div>
 
-  <!-- ============================================================
-       PAGE: CONTACT
-  ============================================================ -->
+  <!-- PAGE: CONTACT -->
   <div class="page" id="page-contact">
     <div class="page-header">
       <div class="container">
@@ -901,9 +891,8 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
+  
+       <!--FOOTER-->
   <footer id="main-footer">
     <div class="container">
       <div class="footer-grid">
@@ -915,8 +904,6 @@
           <span class="follow-label">Follow Us On</span>
           <div class="social-links">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="Follow on Facebook">f</a>
-            <a href="#" class="social-btn" title="Follow on Twitter">𝕏</a>
-            <a href="#" class="social-btn" title="Watch on YouTube">▶</a>
             <a href="#" class="social-btn" title="Connect on LinkedIn">in</a>
           </div>
         </div>
@@ -936,10 +923,10 @@
         <div class="footer-col">
           <h5>Our Services</h5>
           <ul class="footer-links">
-            <li><a href="#" onclick="showPage('services'); return false;">CNC Laser Cutting</a></li>
-            <li><a href="#" onclick="showPage('services'); return false;">CNC Metal Bending</a></li>
-            <li><a href="#" onclick="showPage('services'); return false;">Welding & Fabrication</a></li>
-            <li><a href="#" onclick="showPage('services'); return false;">Powder Coating</a></li>
+            <li><a href="#" onclick="showServiceDetail('laser-cutting'); return false;">CNC Laser Cutting</a></li>
+            <li><a href="#" onclick="showServiceDetail('metal-bending'); return false;">CNC Metal Bending</a></li>
+            <li><a href="#" onclick="showServiceDetail('welding-fabrication'); return false;">Welding & Fabrication</a></li>
+            <li><a href="#" onclick="showServiceDetail('powder-coating'); return false;">Powder Coating</a></li>
           </ul>
         </div>
 

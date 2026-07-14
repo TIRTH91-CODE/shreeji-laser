@@ -1,7 +1,5 @@
-/* ============================================================
-   SHREEJI LASER - JAVASCRIPT
-   Logic: Page routing, mobile menu, animations, counter count-up
-============================================================ */
+/* SHREEJI LASER - JAVASCRIPT
+   Logic: Page routing, mobile menu, animations, counter count-up */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize App
@@ -13,24 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(animateCounters, 400);
 });
 
-/* ──────────────────────────────────────────────────────
-   PAGE NAVIGATION / ROUTING SYSTEM
-────────────────────────────────────────────────────── */
+/* PAGE NAVIGATION / ROUTING SYSTEM */
 function showPage(id) {
   const pages = document.querySelectorAll('.page');
   pages.forEach(p => {
     p.classList.remove('show');
-    // Hide after animation finishes or quickly
-    p.style.display = 'none';
     p.classList.remove('active');
   });
 
   const target = document.getElementById('page-' + id);
   if (target) {
-    target.style.display = 'block';
     target.classList.add('active');
-    
-    // Quick reflow to trigger transition
+
+    // Let the browser apply the active state before revealing the page
     void target.offsetHeight;
     target.classList.add('show');
   }
@@ -67,9 +60,27 @@ function showPage(id) {
   }
 }
 
-/* ──────────────────────────────────────────────────────
-   MOBILE NAVIGATION DRAWER
-────────────────────────────────────────────────────── */
+/* SHOW SERVICE DETAIL - NAVIGATE TO SPECIFIC SERVICE */
+function showServiceDetail(serviceId) {
+  // First show the services page
+  showPage('services');
+  
+  // Then scroll to the specific service section after page loads
+  setTimeout(() => {
+    const serviceSection = document.getElementById('service-' + serviceId);
+    if (serviceSection) {
+      serviceSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Highlight the section briefly
+      serviceSection.style.background = 'rgba(14, 101, 198, 0.05)';
+      setTimeout(() => {
+        serviceSection.style.transition = 'background 0.6s ease';
+        serviceSection.style.background = '';
+      }, 100);
+    }
+  }, 300);
+}
+
+/* MOBILE NAVIGATION DRAWER */
 function toggleNav() {
   const nav = document.getElementById('navLinks');
   const closeBtn = document.getElementById('closeNav');
@@ -88,9 +99,7 @@ function closeNavMenu() {
   }
 }
 
-/* ──────────────────────────────────────────────────────
-   HEADER SCROLL TRANSITION
-────────────────────────────────────────────────────── */
+/* HEADER SCROLL TRANSITION */
 function setupHeaderScroll() {
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => {
@@ -102,9 +111,7 @@ function setupHeaderScroll() {
   });
 }
 
-/* ──────────────────────────────────────────────────────
-   SCROLL REVEAL (INTERSECTION OBSERVER)
-────────────────────────────────────────────────────── */
+/* SCROLL REVEAL (INTERSECTION OBSERVER) */
 let revealObserver;
 
 function setupObserverReveal() {
@@ -142,9 +149,7 @@ function triggerReveal() {
   });
 }
 
-/* ──────────────────────────────────────────────────────
-   STATS COUNT-UP ANIMATION
-────────────────────────────────────────────────────── */
+/* STATS COUNT-UP ANIMATION */
 function animateCounters() {
   const counters = document.querySelectorAll('.page.active .count-up');
   counters.forEach(el => {
@@ -176,9 +181,7 @@ function animateCounters() {
   });
 }
 
-/* ──────────────────────────────────────────────────────
-   CONTACT FORM HANDLER
-────────────────────────────────────────────────────── */
+/* CONTACT FORM HANDLER */
 function handleSubmit(e) {
   e.preventDefault();
   const btn = e.currentTarget;
