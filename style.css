@@ -56,6 +56,7 @@ body {
   background-attachment: fixed;
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1813,6 +1814,43 @@ footer {
   }
   .container {
     padding: 0 16px;
+  }
+  .logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 10px;
+  }
+  .logo-text .brand {
+    font-size: 1rem;
+  }
+  .logo-text .tagline {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+  .hero h1 {
+    font-size: clamp(1.7rem, 8vw, 2.4rem);
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-stats {
+    gap: 18px 24px;
+  }
+  .stat-item {
+    min-width: calc(50% - 12px);
+  }
+  .hero-float-badge {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 10px 14px;
   }
   .owner-block {
     flex-direction: column;
